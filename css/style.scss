@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f1f1f1;
+}
+
+.container {
+  perspective: 320px; //!---透視效果-觀察者與z=0平面的距離
+}
+
+.btn {
+  display: block; //!---block以區塊方式呈現，不同元素會強迫換行，可自訂高寬&上下距
+  margin: 40px 0;
+  width: 240px;
+  height: 80px;
+  border: none;
+  background-color: #e15f41;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 6px;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s linear;
+}
+
+//*向上翻
+.btn1:hover {
+  transform: rotateX(15deg);
+  box-shadow: 0 15px 15px #e15f4190;
+}
+
+//*向下翻
+.btn2:hover {
+  transform: rotateX(-15deg);
+  box-shadow: 0px -15px 15px #e15f4190;
+}
+
+//*向右翻
+.btn3:hover {
+  transform: rotateY(15deg);
+  box-shadow: 15px 0px 15px #e15f4190;
+}
+
+//*向左翻
+.btn4:hover {
+  transform: rotateY(-15deg);
+  box-shadow: -15px 0px 15px #e15f4190;
+}
